@@ -1,0 +1,64 @@
+.Post {
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    min-width: 250px;
+    flex: 1 0 25%;
+    padding: 5px;
+    min-height: 500px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    background-color: whitesmoke;
+
+    &_ImageFrame {
+        padding: 10rem;
+    }
+
+    &_Info {
+        width: 100%;
+        background-color: #292420;
+        padding: 6rem;
+        color: azure;
+        display: flex;
+        align-items: center;
+    }
+
+    &_Image {
+        width: 100%;
+        height: 300px;
+    }
+
+    &_Date {
+        color: white;
+        text-decoration: none;
+        margin-left: auto;
+    }
+    &_Description {
+        padding: 10rem;
+        text-align: left;
+        word-break: break-word;
+    }
+
+    &_Like {
+        text-align: center;
+    }
+
+    &_Avatar {
+        float: left;
+        margin-right: 15rem;
+        margin-top: 8rem;
+    }
+    &_InfoWrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+    }
+}
+
+a {
+    line-height: 0;
+    margin: 0;
+}

@@ -1,0 +1,102 @@
+.Register {
+    width: 90%;
+    min-height: 80vh;
+    background: var(--main-bg-color);
+    background-size: cover;
+    color: var(--color-white);
+    border-radius: 20rem;
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    &_Header {
+        font-size: 40rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+        // background-image: linear-gradient(to right bottom, rgb(203, 137, 223), #ff9800);
+        // background-clip: text;
+        // color: transparent;
+        color: var(--color-black);
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+    &_Form {
+        padding: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &_Element {
+            margin-bottom: 15rem;
+        }
+        &_Element:last-of-type {
+            margin-bottom: 10rem;
+        }
+        &_CheckBox {
+            color: pink;
+        }
+        &_Input {
+            width: 100%;
+            display: block;
+            font-family: inherit;
+            border-radius: 2rem;
+            background-color: var(--color-white);
+            border: none;
+            padding: 10rem;
+
+            &-Error {
+                font-size: 10rem;
+                padding-top: 10rem;
+            }
+        }
+        &_Input:not(:placeholder-shown) {
+            border-bottom: 3rem solid green;
+        }
+
+        &_Label {
+            display: block;
+            margin-top: 7rem;
+        }
+
+        &_Radio {
+            display: inline-block;
+            &-Input {
+                opacity: 0;
+            }
+            &-Label {
+                position: relative;
+                padding-left: 40rem;
+                margin-right: 40rem;
+            }
+            &-Btn {
+                display: inline-block;
+                position: absolute;
+                height: 30rem;
+                width: 30rem;
+                border: 5rem solid var(--color-orange-dark);
+                border-radius: 50%;
+                left: 0;
+                top: -5rem;
+
+                &::after {
+                    content: "";
+                    transform: translate(50%, 50%);
+                    display: block;
+                    height: 10rem;
+                    width: 10rem;
+                    border-radius: 50%;
+                    border: solid 2rem var(--color-orange-dark) ;
+                    background-color: var(--color-primary-dark) ;
+                    opacity: 0;
+                }
+            }
+        }
+        &_Radio-Input:checked + &_Radio-Label > &_Radio-Btn::after {
+            opacity: 1;
+        }
+    }
+}

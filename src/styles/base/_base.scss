@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1px;
+    min-height: 100%;
+    width: 100%;
+    @media only screen and (max-width: 736px) {
+        font-size: 5%;
+    }
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    // background-image: linear-gradient(to right bottom, rgba(172, 83, 28, 0.7), rgba(95 ,36 ,156, 0.62));
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+}

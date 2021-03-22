@@ -1,0 +1,15 @@
+.Comments{
+    display: flex;
+    flex-direction: column;
+    // width: 50%;
+}
+.top-bar {
+    padding: 5rem;
+    background: linear-gradient(186deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    h1 {
+      display: inline;
+      font-size: 27rem;
+    }
+}

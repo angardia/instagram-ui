@@ -1,0 +1,40 @@
+.PostPage {
+    margin: 20px;
+    // display: flex;
+    &_Header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & > *:not(p):not(:last-child) {
+            padding-right: 20rem;
+        }
+        & > p {
+            padding-right: 10rem;
+        }
+    }
+
+    &_Wrap {
+        display: flex;
+
+        justify-content: space-evenly;
+        @media only screen and (max-width: 620px) {
+            flex-wrap: wrap;
+        }
+    }
+    &_User {
+        flex: 0 1 60%;
+        margin-right: 40rem;
+        @media only screen and (max-width: 530px) {
+            margin: 20rem;
+            flex: 1;
+        }
+    }
+
+    &_Image {
+        width: 100%;
+    }
+    &_CommentWrap {
+        flex: 1;
+    }
+}

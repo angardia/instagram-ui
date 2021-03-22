@@ -1,0 +1,25 @@
+.Loader{
+    &_Heading {
+        color: black;
+    }
+    &_Image{
+        border: 2px solid rgba(0, 0, 0, 0.3);
+        border-top: 5px solid black;
+        border-radius: 50%;
+        width: 150rem;
+        height: 150rem;
+        animation: spin 1.5s linear infinite;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

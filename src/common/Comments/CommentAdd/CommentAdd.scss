@@ -1,0 +1,18 @@
+.CommentAdd {
+    display: flex;
+    flex-wrap: wrap;
+
+    &_FormWrap{
+        flex: 1;
+    }
+    
+    &_TextArea {
+        width:100%;
+        resize: vertical;
+        padding:15px;
+        border-radius:15px;
+        border:0;
+        box-shadow: 4px 4px 10px #673ab7;
+        height:150px;
+    }
+}

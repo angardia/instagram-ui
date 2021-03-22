@@ -1,0 +1,33 @@
+.Avatar {
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+
+
+    &--sm{
+        width: 40rem;
+        height: 40rem;
+        border-radius: 50% 0%;
+        color: black;
+        border: solid 2rem transparent;
+        background: linear-gradient(186deg, #2afffc, #c555ff);
+        background-origin: border-box;
+    }
+
+    &--md{
+        border-radius: 50% 0%;
+        color: black;
+        border: solid 2rem transparent;
+        background: linear-gradient(186deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+        background-origin: border-box;
+    }
+
+    &--lg{
+        width: 60rem;
+        height: 60rem;
+        border: solid 2rem transparent;
+        background: linear-gradient(186deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+        background-origin: border-box;
+    }
+}
+

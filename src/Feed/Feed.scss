@@ -1,0 +1,27 @@
+.FeedWrapper{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.Feed {
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: stretch;
+  // margin-top: 10rem;
+  // padding: 10rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-width: 1000px;
+}
+// .test{
+//   flex: 1 0 300px;
+//   margin: 10px;
+//   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+
+// }

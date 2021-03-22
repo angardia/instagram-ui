@@ -1,0 +1,32 @@
+.HeaderNav {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    @media only screen and (max-width: 678px) {
+        justify-content: flex-end;
+        width: 100%;
+        // padding-bottom: 10rem;
+        
+      }
+    //   @media only screen and (max-width: 610px) {
+
+    //     padding-bottom: 10rem;
+    //   }
+
+    & > * {
+        height: 100%;
+        padding: 0 20rem;
+        display: flex;
+        align-items: center;
+        margin: 10rem 0;
+    }
+    & > *:hover {
+        background-color: white;
+        @media only screen and (max-width: 678px) {
+            // padding: 10rem 0 10rem 0;
+          }
+    }
+    &_CreatePostIcon {
+        width: 40rem;
+    }
+}
