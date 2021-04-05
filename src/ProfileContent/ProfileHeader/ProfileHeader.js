@@ -34,7 +34,7 @@ export default function ProfileHeader(props) {
             }
         }
         getInfo();
-    }, [username, loggedInUser])
+    }, [username, loggedInUser, user])
 
 
     return (
