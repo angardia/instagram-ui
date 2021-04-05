@@ -1,0 +1,15 @@
+.PostLike_Btn{
+    cursor: pointer;
+    
+    &-Active{
+        display:inline-block;
+        animation: pulse 0.5s infinite;
+    }
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(0.9);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+  }
