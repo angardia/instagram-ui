@@ -18,7 +18,7 @@ export default function PostLike({ post }) {
 
     return (
         <div>
-            {like ? <span  onClick={handleLike} className="PostLike_Btn-Active">❤️</span> : <span  onClick={handleLike} className="PostLike_Btn">🖤</span>} likes: {thisPost.likes.length}
+            {like ? <span  onClick={handleLike} className="PostLike_Btn PostLike_Btn-Active">❤️</span> : <span  onClick={handleLike} className="PostLike_Btn">🖤</span>} likes: {thisPost.likes.length}
         </div>
     )
 }
