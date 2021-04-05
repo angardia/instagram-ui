@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { UserService } from '../../../services/user.service';
+import { PostService } from '../../../services/post.service';
+// import { UserService } from '../../../services/user.service';
 import { UserContext } from '../../../user-context';
 import "./PostLike.scss";
 
@@ -11,16 +12,9 @@ export default function PostLike({ post }) {
     const [thisPost, setThisPost] = useState(post);
 
     async function handleLike() {
-        const res = await fetch(`http://localhost:4000/post/${post._id}/likes`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: UserService.getToken()
-            }
-        });
-        const updatedPost = await res.json();
-        setThisPost(updatedPost);
-        setLike(updatedPost.likes.includes(user._id));
+        const like = await PostService.handleLike(post._id);
+        setThisPost(like);
+        setLike(like.likes.includes(user._id));
     }
 
     return (

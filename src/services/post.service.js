@@ -42,20 +42,22 @@ static async getComments(postId){
         }
     }
 
-    // static async likes(postId) {
-    //     try {
-    //         const res =await fetch(environment.apiUrl + `/posts/${postId}/likes`, {
-    //             method: "POST",
-    //             headers: {
-    //                 Authorization: UserService.getToken()
-    //             }
-    //         });
-    //         return res.json();
+    static async handleLike(postId) {
+        try {
+            const res =await fetch(environment.apiUrl + `/post/${postId}/likes`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: UserService.getToken()
+                }
+            });
+            const updatedPost = await res.json();
+            return updatedPost;
 
-    //     }
-    //     catch (e) {
-    //         console.log(e);
-    //     }
-    // }
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
 
 }
