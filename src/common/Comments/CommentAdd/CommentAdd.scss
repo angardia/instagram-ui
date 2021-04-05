@@ -1,6 +1,7 @@
 .CommentAdd {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20rem;
 
     &_FormWrap{
         flex: 1;
@@ -14,5 +15,23 @@
         border:0;
         box-shadow: 4px 4px 10px #673ab7;
         height:150px;
+    }
+    &_BtnWrap{
+        text-align: center;
+    }
+
+    &_Btn{
+        background-image: linear-gradient(to right, #2afffc, #673ab7, #673ab7, #2afffc);
+        box-shadow: 4px 4px 10px #673ab7;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            background-position: 100% 0;
+            transition: all .4s ease-in-out;
+        }
+        
+        &:focus {
+            outline: none;
+        }
     }
 }

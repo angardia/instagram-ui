@@ -33,29 +33,29 @@ export default function Login() {
 
     return (
         <div className="Login">
-            <h2>Login</h2>
+            <h2  className="Login_Header">Login</h2>
             { showError && <div>incorrect username or password</div>}
             <Formik
                 initialValues={{ username: "", password: "" }}
                 validationSchema={loginSchema}
                 onSubmit={submit}>
                 <Form>
-                    <div className="form">
+                    <div className="Login_Form">
                         <div>
-                            <label htmlFor="username" className="Form-label">Username</label>
-                            <Field name="username" className="Form-input" id="username" />
-                            <ErrorMessage name="username" component="div" />
+                            <label htmlFor="username" className="Login_Form_Label">Username</label>
+                            <Field name="username" className="Login_Form_Input" id="username" />
+                            <ErrorMessage name="username" component="div" className="Login_Form_Input_Error" />
                         </div>
                         <div>
-                            <label htmlFor="password" className="Form-label">password</label>
-                            <Field name="password" className="Form-input" id="password" />
-                            <ErrorMessage name="password" component="div" />
+                            <label htmlFor="password" className="Login_Form_Label">password</label>
+                            <Field name="password" className="Login_Form_Input" id="password" type="password" />
+                            <ErrorMessage name="password" component="div" className="Login_Form_Input_Error"/>
                         </div>
-                        <button type="submit" className="btn btn-primary">Login</button>
+                        <button type="submit" className="Btn Login_Form_Btn">Login</button>
                     </div>
                 </Form>
             </Formik>
-            <div>
+            <div className="Login_RegisterLink">
                 <Link to="/register" >
                 <p>New to GameShot? Register now!</p>
                 </Link>

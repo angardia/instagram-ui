@@ -9,7 +9,7 @@ export default function Header() {
         <header className="Header">
             <div className="Header_TitleWrap">
                 <div className="Header_Title">
-                    <h1 >GameShot</h1>
+                    <a className="" href="/">GameShot</a>
                 </div>
                 <div className="Header_HomeWrap" >
                     <Link to="/">
@@ -18,7 +18,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <SearchBar />
+            {/* <SearchBar /> */}
             <HeaderNav />
         </header>
     );

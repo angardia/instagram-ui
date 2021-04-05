@@ -1,23 +1,15 @@
 .FeedWrapper{
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  // display: flex;
+  // justify-content: center;
+  // align-content: center;
 }
 
 .Feed {
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: stretch;
-  // margin-top: 10rem;
-  // padding: 10rem;
-  display: flex;
-  flex-flow: row wrap;
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300rem, 1fr));
+  grid-gap: 10rem;
   justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  max-width: 1000px;
 }
 // .test{
 //   flex: 1 0 300px;

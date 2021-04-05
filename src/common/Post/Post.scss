@@ -2,14 +2,10 @@
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
-    max-width: 300px;
-    min-width: 250px;
-    flex: 1 0 25%;
-    padding: 5px;
-    min-height: 500px;
+    padding: 5rem;
     font-weight: bold;
     text-align: center;
-    margin: 10px;
+    margin: 10rem;
     background-color: whitesmoke;
 
     &_ImageFrame {
@@ -26,8 +22,9 @@
     }
 
     &_Image {
-        width: 100%;
+        max-width: 100%;
         height: 300px;
+        object-fit: contain;
     }
 
     &_Date {
@@ -39,6 +36,9 @@
         padding: 10rem;
         text-align: left;
         word-break: break-word;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &_Like {

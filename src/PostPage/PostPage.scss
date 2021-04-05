@@ -19,20 +19,31 @@
 
         justify-content: space-evenly;
         @media only screen and (max-width: 620px) {
-            flex-wrap: wrap;
+            display: block;
         }
     }
     &_User {
-        flex: 0 1 60%;
-        margin-right: 40rem;
-        @media only screen and (max-width: 530px) {
+        flex: 0 1 50%;
+        margin-right: 30rem;
+        @media only screen and (max-width: 620px) {
             margin: 20rem;
             flex: 1;
         }
     }
+    &_Description {
+        box-shadow: 4px 4px 10px #673ab7;
+        padding: 5rem;
+        border-radius: 5rem;
+    }
 
     &_Image {
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        box-shadow: 4px 4px 10px #673ab7;
+        border-radius: 5rem;
+    }
+    &_Content {
+        word-break: break-word;
     }
     &_CommentWrap {
         flex: 1;

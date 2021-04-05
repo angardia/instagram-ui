@@ -5,17 +5,22 @@ import { Link } from 'react-router-dom';
 
 export default function SearchResult(props) {
 
-    const { username, avatar, createdAt, bio } = props.user;
+    const { username, avatar, createdAt, bio, followers } = props.user;
 
     return (
 
-        <div>
-            <Link to={"/profile/" + username}>
-                <Avatar image={avatar} size="sm" />
-                <p>{username}</p>
-                <p>{createdAt}</p>
-                <p>{bio}</p>
-            </Link>
+        <div className="SearchResult">
+            <div className="SearchResult_Wrap">
+                <div className="SearchResult_Avatar">
+                    <Link to={"/profile/" + username}>
+                        <Avatar image={avatar} size="lg" />
+                    </Link>
+                </div>
+                <div><p>{username}</p></div>
+                <div><p>{bio}</p></div>
+
+            </div>
+
         </div>
     )
 }

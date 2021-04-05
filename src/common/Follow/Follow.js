@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { UserService } from '../../services/user.service';
+import "./Follow.scss";
 
 
 export default function Follow({ profileOwner, loggedInUser }) {
@@ -28,7 +29,7 @@ export default function Follow({ profileOwner, loggedInUser }) {
 
     return (
         <div onClick={handleFollow}>
-            {follow ? <span>Unfollow</span> : <span>Follow</span>} Followers : {userHeader.followers.length}
+      {follow ? <span className="Btn Follow_Btn">Unfollow</span> : <span className="Btn">Follow</span>} 
         </div>
     )
 }

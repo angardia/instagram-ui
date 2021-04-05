@@ -1,22 +1,26 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import TimeAgo from 'timeago-react';
 import { UserContext } from '../../../user-context';
 import Avatar from '../../Avatar/Avatar';
 import "./Comment.scss";
 import CommentDelete from './CommentDelete/CommentDelete';
 
-export default function Comment({ comment }) {
-   const { user } = useContext(UserContext);
-    const [deleteBtn, setDeleteBtn] = useState(true);
-    // const [follow, setFollow] = useState(profileOwner.followers.includes(loggedInUser._id));
-    // console.log(user);
+export default function Comment({ comment, commentDelete }) {
+    const { user } = useContext(UserContext);
+    console.log(comment.user._id);
+    // const [deleteBtn, setDeleteBtn] = useState(true);
+    const [showDeleteBtn, setShowDeleteBtn] = useState(comment.user._id === user._id);
+
+    useEffect(() => {
+        setShowDeleteBtn(comment.user._id === user._id);
+
+    }, [showDeleteBtn, comment.user, user._id])
+
     return (
         <div>
-
-
             <div className="Comment">
                 <div className="Comment_Avatar">
-                    <Avatar image={comment.user.avatar} />
+                    <Avatar size="sm" image={comment.user.avatar} />
                     <p>{comment.user.username}</p>
                 </div>
                 <div className="Comment_Content GradientBorder">
@@ -28,7 +32,7 @@ export default function Comment({ comment }) {
                         <TimeAgo datetime={comment.createdAt} />
                     </div>
                 </div>
-                {deleteBtn ? <CommentDelete commentId={comment._id} /> : ""}
+                {showDeleteBtn ? <CommentDelete commentId={comment._id} onCommentDelete={commentDelete} /> : ""}
             </div>
         </div>
     )

@@ -1,44 +1,20 @@
 .Comment {
     display: flex;
-    padding: 20rem;
+    padding: 15rem;
     &_Avatar {
-        margin-right: 20rem;
+        margin-right: 15rem;
     }
     &_Content {
-        padding: 10rem;
-        flex: 1 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 14rem;
+      padding: 10rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 14rem;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 4px 4px 10px #673ab7;
     }
 }
-.GradientBorder {
-    position: relative;
-    color: #fff;
-    background: #020117;
-  }
-  .GradientBorder::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
-    z-index: -1;
-  }
-  .GradientBorder::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
-    z-index: -2;
-    filter: blur(40px);
-  }
 
   hr{
     background: linear-gradient(

@@ -1,0 +1,24 @@
+.SearchResult {
+    border-radius: 8px;
+    margin: 10rem;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 300px;
+    justify-content: space-around;
+    box-shadow: 4px 4px 10px #673ab7;
+
+    &_Wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    &_Avatar {
+
+    }
+}

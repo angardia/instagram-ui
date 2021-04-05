@@ -9,9 +9,10 @@ export default function ProfileHeader(props) {
 
     const { user: loggedInUser } = useContext(UserContext);
     // console.log(loggedInUser);
-    const { username, postNum } = props;
+    const { username, postNum , } = props;
     const [user, setUser] = useState({});
     const [follow, setFollow] = useState(false);
+    const [followersNum, setFollowersNum] = useState([]);
 
 
     useEffect(() => {
@@ -19,6 +20,7 @@ export default function ProfileHeader(props) {
             try {
                 const user = await UserService.get(username);
                 setUser(user);
+                setFollowersNum(user.followers.length)
                 // console.log(user);
                 if (user.username !== loggedInUser.username) {
                     setFollow(true)
@@ -37,9 +39,10 @@ export default function ProfileHeader(props) {
 
     return (
         <div className="ProfileHeader">
-            <h2>{user.username}</h2>
             <Avatar image={user.avatar} size="lg" />
-            <p>Posts amount: {postNum}</p>
+            <h2>{user.username}</h2>           
+            <p>Posts: {postNum}</p>
+            <p>Followers: {followersNum}</p>
             { follow ?  <Follow profileOwner={user} loggedInUser={loggedInUser} /> : ""}
         </div>
     )

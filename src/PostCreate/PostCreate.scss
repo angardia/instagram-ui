@@ -1,6 +1,84 @@
 .PostCreation {
-    &_Preview {
-        width: 300px;
-        height: 300px;
+    width: 50%;
+    padding: 2%;
+    margin: 10% auto;
+    background: #fff;
+    box-shadow: 4px 4px 10px #673ab7;
+    border-radius: 50rem;
+    @media only screen and (max-width: 736px) {
+        width: 90%;
     }
+
+    &_Header {
+        text-align: center;
+        color: #2196f3;
+    }
+    &_Form {
+        width: 100%;
+        margin: 0 auto;
+        padding: 60px 30px;
+        box-sizing: border-box;
+        background: whitesmoke;
+        box-shadow: 4px 4px 10px #03a9f4;
+        border-radius: 50rem;
+    }
+
+    // &_PreviewContainer {
+    // }
+
+    &_Preview {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &_Element {
+        text-align: center;
+    }
+    &_Label {
+        padding: 6px 12px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: blueviolet;
+    }
+    // &_Image {
+    // }
+    // &_Form_Error {
+    // }
+    &_CreatePostIcon {
+        width: 60rem;
+    }
+    &_TextArea {
+        width: 100%;
+        resize: vertical;
+        margin-top: 5%;
+        padding: 15rem;
+        border-radius: 15rem;
+        border: 0;
+        box-shadow: 4px 4px 10px #673ab7;
+        height: 150px;
+    }
+    &_BtnWrap {
+        text-align: center;
+    }
+    &_Btn {
+        background-image: linear-gradient(to right, #2afffc, #673ab7, #673ab7, #2afffc);
+        box-shadow: 4px 4px 10px #673ab7;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            background-position: 100% 0;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+input[type="file"] {
+    display: none;
 }

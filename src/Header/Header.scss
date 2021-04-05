@@ -9,10 +9,16 @@
   // padding: 0 20rem;
   &_TitleWrap {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
     justify-items: center;
     align-items: inherit;
+    padding: 10rem;
+  }
+  &_Title{
+    font-size: 35rem;
+    background: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &_IconHome {

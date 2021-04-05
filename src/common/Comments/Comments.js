@@ -26,21 +26,28 @@ export default function Comments({ postId }) {
         setComments([...comments, comment]);
     }
 
+    function onCommentDelete(commentId){
+        console.log(comments);
+        const filteredComments = comments.filter(comment => !comment._id.includes(commentId) );
+        console.log(filteredComments);
+        setComments([...filteredComments]);
+    }
+
 
     return (
         <div className="Comments">
-            <header class="top-bar">
+            <header className="top-bar">
                     <h1>Comments</h1>
             </header>
 
 
             {comments.map(comment => {
-                  console.log(comment.user);
-                return <Comment key={comment._id} comment={comment} />
+                //   console.log(comment.user);
+                return <Comment key={comment._id} comment={comment} commentDelete={onCommentDelete} />
 
             })}
 
-            <CommentAdd postId={postId} onCommentAdd={onCommentAdd} />
+            <CommentAdd postId={postId} onCommentAdd={onCommentAdd}  />
         </div>
     )
 }

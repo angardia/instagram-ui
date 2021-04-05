@@ -31,7 +31,7 @@ export default function CommentAdd({ postId, onCommentAdd }) {
 
     return (
         <div className="CommentAdd">
-            <Avatar image={user.avatar} />
+            <Avatar size="sm" image={user.avatar} />
             <Formik
                 initialValues={{ content: "" }}
                 onSubmit={(values, { resetForm }) => {
@@ -42,11 +42,11 @@ export default function CommentAdd({ postId, onCommentAdd }) {
                     <Form  className="CommentAdd_FormWrap">
                         <div className="CommentAdd_Form">
                             <div>
-                                <Field className="CommentAdd_TextArea"  name="content" id="content" as="textarea" />
+                                <Field className="CommentAdd_TextArea" placeholder="Add a comment..." name="content" id="content" as="textarea" />
                                 <ErrorMessage name="content" component="div" className="CommentAdd_Form_Error" />
                             </div>
-                            <div>
-                                <button type="submit" disabled={isSubmitting} >
+                            <div  className="CommentAdd_BtnWrap" >
+                                <button className="Btn CommentAdd_Btn"  type="submit" disabled={isSubmitting} >
                                     {isSubmitting ? "Posting..." : "Post"}</button>
                             </div>
 

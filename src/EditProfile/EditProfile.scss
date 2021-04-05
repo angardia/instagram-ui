@@ -1,10 +1,92 @@
-.Profile_Preview{
-background-size: cover;
-width: 40%;
-max-height: 500px;
+// .Profile_Preview{
+// background-size: cover;
+// width: 40%;
+// max-height: 500px;
+// }
+input[type="file"] {
+    display: none;
 }
 
-// .Profile_PreviewHolder{
-//     width: 300px;
-//     height: 300px;
-// }
+.Profile {
+    width: 50%;
+    padding: 2%;
+    margin: 10% auto;
+    background: #fff;
+    box-shadow: 4px 4px 10px #673ab7;
+    border-radius: 50rem;
+    @media only screen and (max-width: 736px) {
+        width: 100%;
+    }
+
+    &_Header {
+        text-align: center;
+    }
+    &_Form {
+        margin: 0 auto;
+        padding: 40rem 30rem;
+        box-sizing: border-box;
+        background: whitesmoke;
+        box-shadow: 4px 4px 10px #03a9f4;
+        border-radius: 50rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &_Element {
+        }
+        &_Label {
+            display: block;
+            padding: 6px 12px;
+            &:first-child() {
+                cursor: pointer;
+            }
+        }
+        &_Input {
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            transition: 0.6s;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            background-color: transparent;
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid #673ab7;
+            }
+        }
+        &_TextArea {
+            width: 100%;
+            resize: vertical;
+            margin-top: 5%;
+            padding: 15rem;
+            border-radius: 15rem;
+            border: 0;
+            box-shadow: 4px 4px 10px #673ab7;
+            height: 150px;
+        }
+        &_BtnWrap{
+            text-align: center;
+        }
+        &_Btn{
+            background-image: linear-gradient(to right, #2afffc, #673ab7, #673ab7, #2afffc);
+            box-shadow: 4px 4px 10px #673ab7;
+            transition: all 0.4s ease-in-out;
+    
+            &:hover {
+                background-position: 100% 0;
+                transition: all 0.4s ease-in-out;
+            }
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &_PreviewHolder {
+    }
+    &_Preview {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}

@@ -48,22 +48,27 @@ export default function PostCreate() {
                 {({ setFieldValue, isSubmitting }) => (
                     <Form>
                         <div className="PostCreation_Form">
+
                             <div className="PostCreation_PreviewContainer">
-                                <img className="PostCreation_Preview"  src={file} alt="current img preview" />
+                                <img className="PostCreation_Preview" style={file ? {display: "block"} :{display: "none"}} src={file ? file : null} alt="current img preview" />
                             </div>
                             <div className="PostCreation_Element">
-                                <input name="image" className="PostCreation_image" id="image" type="file" onChange={(e) => {
+                                <label for="image" className="PostCreation_Label">
+                                <img className="PostCreation_CreatePostIcon" alt="create icon" src={require("../../src/styles/icons/upload.svg").default} />
+                                Click to Upload</label>
+                                <input name="image" className="PostCreation_Image" id="image" type="file" onChange={(e) => {
                                     preview(e);
                                     return setFieldValue("image", e.target.files[0]);
                                 }} />
                                 <ErrorMessage name="image" component="div" className="PostCreation_Form_Error" />
                             </div>
-                            <div>
-                                <Field name="description" id="description" as="textarea" />
+                            <div >
+                                <Field className="PostCreation_TextArea" name="description" id="description" as="textarea" placeholder="What's on you'r mind?" />
                                 <ErrorMessage name="description" component="div" className="PostCreation_Form_Error" />
                             </div>
-                            <div>
-                                <button type="submit" disabled={isSubmitting} >
+
+                            <div className="PostCreation_BtnWrap" >
+                                <button className="Btn PostCreation_Btn" type="submit" disabled={isSubmitting} >
                                     {isSubmitting ? "Posting..." : "Post"}</button>
                             </div>
 

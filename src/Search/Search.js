@@ -37,10 +37,13 @@ export default function Search() {
 
 
     return (
-        <div>
+        <div className="Search">
+            <div className="Search_Header">
             <h1>search</h1>
+            </div>
+           
 
-            <div>
+            <div className="Search_Feed">
                 {
                     users.map(user => {
                         return <SearchResult key={user._id} user={user} />;

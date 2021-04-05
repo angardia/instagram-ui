@@ -1,4 +1,5 @@
 import * as yup from "yup";
+import environment from "../environment";
 
 export const registerSchema = yup.object().shape({
     username: yup.string().lowercase().min(3, "Username should be 3 chars minimum.").max(60, "Username should be 60 chars maximum.").required("Please enter a valid username.")
@@ -22,7 +23,7 @@ async function isUnique(field, value) {
     if (memo[field].hasOwnProperty(value)) {
         return memo[field][value];
     }
-    return await fetch(`http://localhost:4000/user/check?${field}=${value}`,
+    return await fetch(environment.apiUrl + `/user/check?${field}=${value}`,
         {
             headers: {
                 "Content-Type": "application/json"

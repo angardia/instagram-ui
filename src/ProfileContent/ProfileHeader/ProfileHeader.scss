@@ -1,6 +1,10 @@
-.ProfileHeader{
+.ProfileHeader {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    background-color: teal;
+    background: linear-gradient(186deg, #b0fff9, #e2a9ff);
+    justify-content: space-evenly;
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+        flex-wrap: wrap;
+    }
 }
