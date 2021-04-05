@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { PostService } from '../../../services/post.service';
-// import { UserService } from '../../../services/user.service';
 import { UserContext } from '../../../user-context';
 import "./PostLike.scss";
 

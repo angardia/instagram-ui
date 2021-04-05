@@ -77,6 +77,21 @@ export class UserService {
 
   }
 
+
+
+  static async handleFollow(userId) {
+    const updatedUser = await fetch(environment.apiUrl + `/user/${userId}/follow`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: UserService.getToken()
+      }
+    });
+    return updatedUser.json();
+
+
+  }
+
   // static editUser(values){
   //   return fetch(environment.apiUrl + "/user/edit/:id",{
   //     method: "POST",
