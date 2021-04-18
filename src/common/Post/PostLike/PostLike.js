@@ -3,8 +3,6 @@ import { PostService } from '../../../services/post.service';
 import { UserContext } from '../../../user-context';
 import "./PostLike.scss";
 
-
-
 export default function PostLike({ post }) {
     const { user } = useContext(UserContext);
     const [like, setLike] = useState(post.likes.includes(user._id));

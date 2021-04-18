@@ -21,12 +21,11 @@ export default function ProfileHeader(props) {
                 const user = await UserService.get(username);
                 setUser(user);
                 setFollowersNum(user.followers.length)
-                // console.log(user);
                 if (user.username !== loggedInUser.username) {
-                    setFollow(true)
+                    setFollow(true);
                 }
                 else{
-                    setFollow(false)
+                    setFollow(false);
                 }
             }
             catch (e) {
@@ -34,7 +33,7 @@ export default function ProfileHeader(props) {
             }
         }
         getInfo();
-    }, [username, loggedInUser, user])
+    }, [username, loggedInUser, user]);
 
 
     return (

@@ -11,7 +11,6 @@ export default function CommentAdd({ postId, onCommentAdd }) {
     const { user } = useContext(UserContext);
 
     async function onSubmit(values) {
-        //    console.log(values);
         try {
             const res = await fetch(environment.apiUrl + `/post/${postId}/comment`, {
                 method: "PUT",

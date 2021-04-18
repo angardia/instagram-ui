@@ -12,7 +12,6 @@ export default function PostCreate() {
     const [file, setFile] = useState(null);
 
     function preview(e) {
-
         const tst = URL.createObjectURL(e.target.files[0]);
         setFile(tst);
     }

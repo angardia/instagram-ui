@@ -31,7 +31,6 @@ export default function Search() {
 
     function hasNoResult() {
         return (users.length === 0 && query.length > 0);
-        // return !(users.length && query.length);
     }
 
 

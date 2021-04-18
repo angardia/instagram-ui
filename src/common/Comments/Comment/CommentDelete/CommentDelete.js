@@ -17,7 +17,6 @@ export default function CommentDelete({ commentId, onCommentDelete }) {
             });
             const commentToDelete = await res.json();
             if (res.status === 201) {
-                console.log(commentToDelete._id);
                 onCommentDelete(commentToDelete._id);
             }
         }

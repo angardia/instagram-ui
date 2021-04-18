@@ -22,3 +22,9 @@
       text-shadow: 0 0 5rem #fff, 0 0 10rem #ff4da6, 0 0 15rem #ff4da6, 0 0 20rem #ff4da6, 0 0 25rem #ff4da6, 0 0 30rem #ff4da6, 0 0 35rem #ff4da6;
     }
   }
+
+  @keyframes pulse {
+    0% { transform: scale(0.9);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+  }

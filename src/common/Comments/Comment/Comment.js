@@ -7,8 +7,6 @@ import CommentDelete from './CommentDelete/CommentDelete';
 
 export default function Comment({ comment, commentDelete }) {
     const { user } = useContext(UserContext);
-    console.log(comment.user._id);
-    // const [deleteBtn, setDeleteBtn] = useState(true);
     const [showDeleteBtn, setShowDeleteBtn] = useState(comment.user._id === user._id);
 
     useEffect(() => {

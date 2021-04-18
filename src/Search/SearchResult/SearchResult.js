@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function SearchResult(props) {
 
-    const { username, avatar, createdAt, bio, followers } = props.user;
+    const { username, avatar, bio } = props.user;
 
     return (
 

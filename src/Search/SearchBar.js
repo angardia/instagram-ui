@@ -7,7 +7,6 @@ export default function SearchBar() {
 
     const { txt, setTxt } = useContext(UserContext);
     const history = useHistory();
-    console.log(history);
 
     return (
         <div className="SearchBar" >

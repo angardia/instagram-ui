@@ -11,7 +11,6 @@ export default function Feed() {
     useEffect(() => {
         PostService.feed()
             .then(posts => {
-                console.log(posts)
                 setPosts(posts);
                 setIsLoading(false);
             });

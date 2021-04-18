@@ -22,14 +22,11 @@ export default function Comments({ postId }) {
     }, [postId]);
 
     function onCommentAdd(comment) {
-        console.log(comment);
         setComments([...comments, comment]);
     }
 
     function onCommentDelete(commentId){
-        console.log(comments);
         const filteredComments = comments.filter(comment => !comment._id.includes(commentId) );
-        console.log(filteredComments);
         setComments([...filteredComments]);
     }
 
@@ -42,7 +39,6 @@ export default function Comments({ postId }) {
 
 
             {comments.map(comment => {
-                //   console.log(comment.user);
                 return <Comment key={comment._id} comment={comment} commentDelete={onCommentDelete} />
 
             })}

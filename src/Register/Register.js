@@ -19,7 +19,7 @@ export default function Register(props) {
             history.push("/login");
             return;
         }
-        console.log("bad!");
+        console.log("Registration failed");
     }
 
     return (

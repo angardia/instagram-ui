@@ -24,7 +24,6 @@ async function isUnique(field, value) {
         })
         .then(res => res.json())
         .then(res => {
-            console.log(res);
             memo[field][value] = !res;
             return memo[field][value];
         })
