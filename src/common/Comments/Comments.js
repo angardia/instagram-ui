@@ -30,7 +30,6 @@ export default function Comments({ postId }) {
         setComments([...filteredComments]);
     }
 
-
     return (
         <div className="Comments">
             <header className="top-bar">

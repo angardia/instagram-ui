@@ -4,7 +4,6 @@ import Avatar from '../../common/Avatar/Avatar'
 import SearchBar from '../../Search/SearchBar';
 import { UserContext } from '../../user-context';
 import "./HeaderNav.scss";
-// import chatSVG from "../../create.svg";
 
 export default function HeaderNav() {
     const { user } = useContext(UserContext);

@@ -5,7 +5,6 @@ import "./Post.scss";
 import { Link } from "react-router-dom";
 import PostLike from './PostLike/PostLike';
 
-
 export default function Post({ data }) {
 
     return (

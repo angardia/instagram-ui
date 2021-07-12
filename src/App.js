@@ -13,7 +13,6 @@ import { UserService } from './services/user.service';
 import { UserContext } from "./user-context";
 import Search from './Search/Search';
 
-
 function App() {
   const history = useHistory();
   const [user, setUser] = useState({});
@@ -28,7 +27,7 @@ function App() {
           return;
         }
         setUser(user);
-        // history.push("/");
+        history.push("/");
       }
       catch (e) {
         console.log(e);

@@ -36,20 +36,3 @@ async function isUnique(field, value) {
             return memo[field][value];
         })
 }
-
-        // {    
-        //     try {
-        //         const res = await fetch(`http://localhost:4000/user/check/${value}`, {
-        //             headers: {
-        //               "Content-Type": "application/json"
-        //             }
-        //           });
-        //           const test = await res.json();
-        //           console.log(test);
-        //           return test;
-        //     }
-        //     catch (e) {
-        //         console.log(e);
-        //     }
-
-        // }

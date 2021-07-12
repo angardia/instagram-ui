@@ -53,8 +53,3 @@ export default function Search() {
         </div>
     )
 }
-
-
-//<div>
-//<input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
-//</div>

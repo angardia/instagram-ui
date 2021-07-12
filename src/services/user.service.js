@@ -105,17 +105,5 @@ export class UserService {
       }
     });
     return updatedUser.json();
-
-
   }
-
-  // static editUser(values){
-  //   return fetch(environment.apiUrl + "/user/edit/:id",{
-  //     method: "POST",
-  //     headers:{
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(values)
-  //   })
-  // }
 }

@@ -8,7 +8,6 @@ import { UserContext } from "../../../src/user-context";
 export default function ProfileHeader(props) {
 
     const { user: loggedInUser } = useContext(UserContext);
-    // console.log(loggedInUser);
     const { username, postNum , } = props;
     const [user, setUser] = useState({});
     const [follow, setFollow] = useState(false);
