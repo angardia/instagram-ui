@@ -13,6 +13,9 @@
       width: 100%;
       border-radius: 15px;
       box-shadow: 4px 4px 10px #673ab7;
+      word-break: break-word;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 }
 
