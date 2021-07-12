@@ -3,6 +3,23 @@ import environment from "../environment/index";
 
 export class UserService {
 
+  static async editUser(userId, data) {
+    try {
+      const res = await fetch(environment.apiUrl + `/user/edit/${userId}`, {
+        method: "POST",
+        body: data,
+        headers: {
+          Authorization: UserService.getToken()
+        }
+      });
+      const editedUser = await res.json();
+      return editedUser;
+    }
+    catch (e) {
+      console.log(e);
+    }
+  }
+
 
   static async search(username) {
     const res = await fetch(environment.apiUrl + "/user?username=" + username, {

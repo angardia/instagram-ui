@@ -1,6 +1,5 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik} from 'formik';
 import React, { useContext, useState } from 'react';
-import environment from '../environment';
 import { UserService } from '../services/user.service';
 import { UserContext } from "../user-context";
 import { profileSchema } from "./EditProfile.schema";
@@ -33,24 +32,14 @@ export default function Profile() {
         data.append("bio", values.bio);
 
         try {
-            const test = await fetch(environment.apiUrl + `/user/edit/${user._id}`,
-                {
-                    method: "POST",
-                    body: data,
-                    headers: {
-                        Authorization: UserService.getToken()
-                    }
-                });
-            const editedUser = await test.json();
-            return setUser(editedUser);
+            const editedUser = await UserService.editUser(user._id, data);
+            setUser(editedUser);
         }
         catch (e) {
             console.log("fail to edit");
         }
 
     }
-
-
 
     return (
         <div className="Profile">
@@ -60,7 +49,10 @@ export default function Profile() {
                     initialValues={{ image: "", password: "", email: "", bio: "" }}
                     enableReinitialize={true}
                     validationSchema={profileSchema}
-                    onSubmit={submit}>
+                    onSubmit={(values, {resetForm}) => {
+                        submit(values);
+                        resetForm();
+                    }}>
                     {({ setFieldValue, isSubmitting }) => (
                         <Form >
                             <div className="Profile_Form">
@@ -70,7 +62,7 @@ export default function Profile() {
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="image" className="PostCreation_Label">
+                                    <label htmlFor="image" className="PostCreation_Label">
                                         <img className="PostCreation_CreatePostIcon" alt="create icon" src={require("../../src/styles/icons/upload.svg").default} /></label>
                                     <input name="image" className="" id="image" type="file" onChange={(e) => {
                                         preview(e);

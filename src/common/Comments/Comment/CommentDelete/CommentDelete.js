@@ -1,30 +1,17 @@
 import React from 'react';
-import { UserService } from "../../../../services/user.service";
+import { PostService } from '../../../../services/post.service';
 import "./CommentDelete.scss";
 
 export default function CommentDelete({ commentId, onCommentDelete }) {
 
     async function handleDelete() {
-        console.log(commentId);
         try {
-            const res = await fetch(`http://localhost:4000/post/comment/${commentId}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: UserService.getToken()
-                }
-
-            });
-            const commentToDelete = await res.json();
-            if (res.status === 201) {
-                onCommentDelete(commentToDelete._id);
-            }
+            const res = await PostService.deleteComment(commentId);
+            onCommentDelete(res._id);
         }
         catch (e) {
             console.log(e);
         }
-
-
     }
 
     return (

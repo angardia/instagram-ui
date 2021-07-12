@@ -1,7 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React, { useContext } from 'react';
-import environment from '../../../environment';
-import { UserService } from '../../../services/user.service';
+import { PostService } from '../../../services/post.service';
 import { UserContext } from '../../../user-context';
 import Avatar from '../../Avatar/Avatar';
 import "./CommentAdd.scss";
@@ -12,16 +11,8 @@ export default function CommentAdd({ postId, onCommentAdd }) {
 
     async function onSubmit(values) {
         try {
-            const res = await fetch(environment.apiUrl + `/post/${postId}/comment`, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: UserService.getToken()
-                },
-                body: JSON.stringify(values)
-            });
-            const comment = await res.json();
-            onCommentAdd(comment);
+            const res = await PostService.addComment(postId,values);
+            onCommentAdd(res);
         }
         catch (e) {
             console.log(e);
