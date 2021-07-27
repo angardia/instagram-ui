@@ -65,7 +65,7 @@ function App() {
           <Route path="/search">
             <Search />
           </Route>
-          <Route path="/" exact>
+          <Route path="/">
             <Feed />
           </Route>
         </Switch>
