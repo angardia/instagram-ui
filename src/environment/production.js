@@ -1,3 +1,3 @@
 export const production = {
-    apiUrl: "https://blooming-reef-51941.herokuapp.com"
+    apiUrl: "https://agile-beyond-61541.herokuapp.com"
 };
