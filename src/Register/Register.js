@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import "./Register.scss";
 import { registerSchema } from './register.schema';
-import { useHistory } from 'react-router-dom';
+import {Link, useHistory } from 'react-router-dom';
 import { UserService } from '../services/user.service';
 
 export default function Register(props) {
@@ -67,7 +67,11 @@ export default function Register(props) {
                     </Form>
                 )}
             </Formik>
-
+            <div className="Register_LoginLink">
+                <Link to="/login" >
+                <p>Already a member? Log in now!</p>
+                </Link>
+            </div>
         </div>
     )
 }
