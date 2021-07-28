@@ -1,4 +1,6 @@
 import * as yup from "yup";
+import environment from '../environment';
+
 
 export const profileSchema = yup.object().shape({
     email: yup.string().lowercase().max(100, "cannot exceed 100 chars.").email()
