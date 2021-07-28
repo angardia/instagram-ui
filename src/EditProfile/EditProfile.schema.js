@@ -16,7 +16,7 @@ async function isUnique(field, value) {
     if (memo[field].hasOwnProperty(value)) {
         return memo[field][value];
     }
-    return await fetch(`http://localhost:4000/user/check?${field}=${value}`,
+    return await fetch(environment.apiUrl +`/user/check?${field}=${value}`,
         {
             headers: {
                 "Content-Type": "application/json"
@@ -28,3 +28,4 @@ async function isUnique(field, value) {
             return memo[field][value];
         })
 }
+
