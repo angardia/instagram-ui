@@ -1,3 +1,5 @@
+@import "../styles/main.scss";
+
 .Login {
     color: #f76d9c;
     width: 50%;
@@ -60,8 +62,7 @@
             }
 
             &_Error {
-                color: red;
-                font-size: 10rem;
+                @include errorMsg;
             }
         }
         &_Btn {

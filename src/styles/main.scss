@@ -1,7 +1,9 @@
-@import "../src/styles/base/base.scss";
-@import "../src/styles/base/typo.scss";
-@import "../src/styles/base/animation.scss";
 
-@import "../src/styles/components/btn.scss";
+@import './base/base';
+@import './base/typo';
+@import './base/animation';
 
-@import "../src/styles/utilities/vars.scss";
+@import './components/btn';
+
+@import './utilities/mixin';
+@import './utilities/vars';
